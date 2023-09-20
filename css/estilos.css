@@ -60,11 +60,19 @@ nav h2 a {
 }
 
 nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
-    background-color: var(--cor-gelo);
+    background-color: var(--cor-branco);
 }
 
 
-.menu { list-style: none;}
+/* Regra da lista ul de links */
+.menu { 
+    list-style: none;
+    /* usamos (display none) para nao exibir a lista de links */
+    display: none;
+}
+
+
+
 /* Regras para formartar os links contidos n alista menu */
 .menu a { 
     color: var(--cor-texto);
@@ -73,5 +81,27 @@ nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
     justify-content: center;
     align-items: center;
     height: 50px;
+}
+
+/* Seletor de classes combinadas
+  Essa regra so ira funcionar quando AS DUAS CLASSES estiverem aplicadas JUNTAS  no elemento HTML ( no caso, na lista de menu/links) 
+  
+  OBS: esta combinação será possível por meio da manipulação programada com javascript. */
+
+.menu.aberto {
+    /* O Flex fará a lista de links aparecer */
+    display: flex;
+
+    /* Com os links em forma de coluna (vertical) */
+    flex-direction: column;
+
+    /* Usamos as propriedades de posicionamento e coordenadas para garantir o encaixe correto (abaixo do titulo e da palavra Menu). */
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    /* usamos o background para ter uma cor visivel */
+    background-color:var(--cor-gelo);
+
 }
 
