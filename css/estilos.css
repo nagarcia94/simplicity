@@ -81,15 +81,15 @@ nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
     justify-content: center;
     align-items: center;
     height: 50px;
-}
+ }
 
-/* Seletor de classes combinadas
+ /* Seletor de classes combinadas 
   Essa regra so ira funcionar quando AS DUAS CLASSES estiverem aplicadas JUNTAS  no elemento HTML ( no caso, na lista de menu/links) 
   
   OBS: esta combinação será possível por meio da manipulação programada com javascript. */
 
-.menu.aberto {
-    /* O Flex fará a lista de links aparecer */
+ .menu.aberto { 
+    /* O Flex fará a lista de links aparecer  */
     display: flex;
 
     /* Com os links em forma de coluna (vertical) */
@@ -102,6 +102,16 @@ nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
 
     /* usamos o background para ter uma cor visivel */
     background-color:var(--cor-gelo);
+
+} 
+
+  .destaque { 
+    height: 500px; 
+    background-image: url(../imagens/fundo-destaque.jpg);
+    color: var(--cor-branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
