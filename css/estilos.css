@@ -190,7 +190,8 @@ address {
 .historia {
     background-image: url(../imagens/fundo-madeira.jpg);
     background-attachment: fixed;
-    height: 500px;
+   
+    
 }
 .historia h2 {
     color: var(--cor-branco);
