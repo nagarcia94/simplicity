@@ -185,3 +185,42 @@ abbr {
 address {
     font-style: normal;
 }
+
+
+.historia {
+    background-image: url(../imagens/fundo-madeira.jpg);
+    background-attachment: fixed;
+    height: 500px;
+}
+.historia h2 {
+    color: var(--cor-branco);
+    text-shadow:rgb(156, 44, 4) 4px 5px 0px;
+
+}
+.historia iframe {
+    width: 100%; 
+    margin-top: 2rem;
+    max-width: 700px;
+}
+
+.localizacao iframe {
+    width: 100vw;
+    margin-top: 2rem;
+}
+
+
+footer {
+    background-color: #000;
+    color: var(--cor-branco);
+    height: 30vh;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.limitador {
+    width: 95vw;
+    margin: auto;
+}
