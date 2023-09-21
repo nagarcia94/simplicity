@@ -116,6 +116,7 @@ nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
     flex-direction: column;
     color: var(--cor-branco);
     text-align: center;
+    
 }
 
 
@@ -126,11 +127,31 @@ nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
     tamanho ideal 
     tamanho maximo) */
 
-    font-size: clamp(3rem, 10vw,7rem);
+    font-size: clamp(3rem, 10vw,7rem);  
 }
 
 .destaque p {
-    font-size: clamp(1.5rem, 3vw, 3rem);                                   
+    font-size: clamp(1.5rem, 3vw, 3rem);    
+}                                
+
+.destaque h2, .destaque p {
+     /* indicando onde eu quero a animação colocando no p destaques */
+    animation-name: animaDestaque;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
 }
 
+/* Regras de animação */
 
+@keyframes animaDestaque {
+    from{
+        opacity: 0;
+        transform: translateY(-500px);
+    
+    
+    }
+    to{
+        opacity: 1;
+    
+    }
+}
