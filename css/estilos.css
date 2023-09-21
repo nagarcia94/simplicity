@@ -108,10 +108,13 @@ nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
   .destaque { 
     height: 500px; 
     background-image: url(../imagens/fundo-destaque.jpg);
-    color: var(--cor-branco);
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: column;
+    color: var(--cor-branco);
+    text-align: center;
 }
+
 
