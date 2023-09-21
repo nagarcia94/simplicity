@@ -190,8 +190,7 @@ address {
 .historia {
     background-image: url(../imagens/fundo-madeira.jpg);
     background-attachment: fixed;
-   
-    
+    height: 500px;
 }
 .historia h2 {
     color: var(--cor-branco);
@@ -204,7 +203,7 @@ address {
     max-width: 700px;
 }
 
-.localizacao iframe {
+.localizacao frame {
     width: 100vw;
     margin-top: 2rem;
 }
