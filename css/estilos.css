@@ -114,7 +114,6 @@ nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: var(--cor-branco);
     text-align: center;
     
 }
@@ -139,6 +138,7 @@ nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
     animation-name: animaDestaque;
     animation-duration: 4s;
     animation-timing-function: ease-out;
+    color: var(--cor-branco);
 }
 
 /* Regras de animação */
@@ -154,4 +154,34 @@ nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
         opacity: 1;
     
     }
+}
+
+
+
+article h2 {
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: Raleway, sans-serif;
+    color: var(--cor-titulo);
+}
+
+.front-end, .historia, .localizacao {
+    text-align: center;
+
+}
+
+
+article p {
+    padding: 0.5rem 0;
+    font-size: 1.3rem;
+
+}
+
+
+abbr {
+    text-decoration: underline solid;
+}
+
+address {
+    font-style: normal;
 }
