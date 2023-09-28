@@ -276,9 +276,51 @@ footer {
     font-size: 1.8rem;
     border-bottom: solid 1px;
     margin-bottom: 1rem;
-    
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border: solid 1px;
+}
+
+
+table, th, td {
+    border: solid 1px;
+    /* border collapse remove o espaço entre as bordas */
+    border-collapse: collapse;
+}
+
+caption {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background: rgb(238, 114, 114);
+    color: var(--cor-branco);
+    padding: 4px;
+}
+
+
+th {
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+    border-color: var(--cor-texto);
+    padding: 0.7rem;
 
 }
+
+td {
+    padding: 0.5rem;
+}
+
+td:nth-child(2){ text-align: center;}
+th:last-child, td:last-child {text-align: right;}
+
+tr:nth-child(odd) {
+    background-color: var(--cor-branco);
+}
+
+
 
 
 
