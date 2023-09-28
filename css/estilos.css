@@ -1,30 +1,42 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:wght@700;800&display=swap');
 
-*{box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
-:root { 
+:root {
     /* Variavéis para a paleta de cores do site */
     --cor-titulo: #4d4d4d;
     --cor-texto: #333;
-    --cor-preto : #000 ;
+    --cor-preto: #000;
     --cor-branco: #fff;
     --cor-gelo: #ececec;
-} 
+}
 
-html{font-size: 16px;}
+html {
+    font-size: 16px;
+}
 
 body {
-    color:var(--cor-texto);
+    color: var(--cor-texto);
     font-family: 'Noto Sans', sans-serif;
-    background-color: var(--cor-branco);   
+    background-color: var(--cor-branco);
 }
+
 /* CSS Reset em alguns elementos */
-body, h1, h2, p, figure, .menu {
+body,
+h1,
+h2,
+p,
+figure,
+.menu {
     margin: 0;
     padding: 0;
 }
-img { max-width: 100%;}
+
+img {
+    max-width: 100%;
+}
 
 h1 {
     font-family: 'Raleway', sans-serif;
@@ -41,7 +53,10 @@ h1 a {
     padding: 0.3rem 1rem;
     border: 4px;
 }
-a { text-decoration: none;}
+
+a {
+    text-decoration: none;
+}
 
 header .limitador {
     display: flex;
@@ -51,30 +66,36 @@ header .limitador {
 
 }
 
-header { 
+header {
     position: sticky;
     top: 0;
     background-color: var(--cor-branco);
 
 }
 
-.menu { list-style: none;}
+.menu {
+    list-style: none;
+}
+
 /* Formatação da palavra Menu */
-nav h2 a { 
+nav h2 a {
     color: var(--cor-preto);
     font-size: 1.2rem;
     padding: 1rem;
-    display: inline-block; 
+    display: inline-block;
 
 }
 
-nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
-    background-color: var(--cor-branco);
+nav h2 a:hover,
+nav h2 a:focus,
+.menu a:hover,
+.menu a:focus {
+    background-color: var(--cor-gelo);
 }
 
 
 /* Regra da lista ul de links */
-.menu { 
+.menu {
     list-style: none;
     /* usamos (display none) para nao exibir a lista de links */
     display: none;
@@ -83,21 +104,21 @@ nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
 
 
 /* Regras para formartar os links contidos n alista menu */
-.menu a { 
+.menu a {
     color: var(--cor-texto);
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
- }
+}
 
- /* Seletor de classes combinadas 
+/* Seletor de classes combinadas 
   Essa regra so ira funcionar quando AS DUAS CLASSES estiverem aplicadas JUNTAS  no elemento HTML ( no caso, na lista de menu/links) 
   
   OBS: esta combinação será possível por meio da manipulação programada com javascript. */
 
- .menu.aberto { 
+.menu.aberto {
     /* O Flex fará a lista de links aparecer  */
     display: flex;
 
@@ -110,12 +131,12 @@ nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
     right: 0;
 
     /* usamos o background para ter uma cor visivel */
-    background-color:var(--cor-gelo);
+    background-color: var(--cor-gelo);
 
-} 
+}
 
-  .destaque { 
-    height: 90vh; 
+.destaque {
+    height: 90vh;
     background-image: url(../imagens/fundo-destaque.jpg);
     background-attachment: fixed;
     display: flex;
@@ -123,7 +144,7 @@ nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    
+
 }
 
 
@@ -134,15 +155,16 @@ nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
     tamanho ideal 
     tamanho maximo) */
 
-    font-size: clamp(3rem, 10vw,7rem);  
+    font-size: clamp(3rem, 10vw, 7rem);
 }
 
 .destaque p {
-    font-size: clamp(1.5rem, 3vw, 3rem);    
-}                                
+    font-size: clamp(1.5rem, 3vw, 3rem);
+}
 
-.destaque h2, .destaque p {
-     /* indicando onde eu quero a animação colocando no p destaques */
+.destaque h2,
+.destaque p {
+    /* indicando onde eu quero a animação colocando no p destaques */
     animation-name: animaDestaque;
     animation-duration: 4s;
     animation-timing-function: ease-out;
@@ -152,15 +174,16 @@ nav h2 a:hover, nav h2 a:focus, .menu a:hover, .menu a:focus {
 /* Regras de animação */
 
 @keyframes animaDestaque {
-    from{
+    from {
         opacity: 0;
         transform: translateY(-500px);
-    
-    
+
+
     }
-    to{
+
+    to {
         opacity: 1;
-    
+
     }
 }
 
@@ -173,7 +196,9 @@ article h2 {
     color: var(--cor-titulo);
 }
 
-.front-end, .historia, .localizacao {
+.front-end,
+.historia,
+.localizacao {
     text-align: center;
 
 }
@@ -200,13 +225,15 @@ address {
     background-attachment: fixed;
     height: 500px;
 }
+
 .historia h2 {
     color: var(--cor-branco);
-    text-shadow:rgb(156, 44, 4) 4px 5px 0px;
+    text-shadow: rgb(156, 44, 4) 4px 5px 0px;
 
 }
+
 .historia iframe {
-    width: 100%; 
+    width: 100%;
     margin-top: 2rem;
     max-width: 700px;
 }
@@ -232,5 +259,47 @@ footer {
 .limitador {
     width: 95vw;
     margin: auto;
-    
+
+}
+
+
+
+
+@media screen and (min-width: 570px) {
+
+    header h2 {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    header nav {
+        width: 70%;
+    }
+
+    .front-end img {
+        height: 150px;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+
+
+    html {
+        font-size: 20px;
+    }
+
+
+    .limitador {
+        max-width: 1000px;
+    }
+
 }
