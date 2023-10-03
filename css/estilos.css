@@ -69,6 +69,8 @@ header .limitador {
 header {
     position: sticky;
     top: 0;
+    /* z-index garante que o header fique para frente do conteudo */
+    z-index: 100;
     background-color: var(--cor-branco);
 
 }
@@ -271,6 +273,7 @@ footer {
     padding: 0.5rem;
     border-radius: 8px;
 }
+
 .conteudo h2 {
     padding-left: 0;
     font-size: 1.8rem;
@@ -285,7 +288,9 @@ table {
 }
 
 
-table, th, td {
+table,
+th,
+td {
     border: solid 1px;
     /* border collapse remove o espaço entre as bordas */
     border-collapse: collapse;
@@ -313,8 +318,14 @@ td {
     padding: 0.5rem;
 }
 
-td:nth-child(2){ text-align: center;}
-th:last-child, td:last-child {text-align: right;}
+td:nth-child(2) {
+    text-align: center;
+}
+
+th:last-child,
+td:last-child {
+    text-align: right;
+}
 
 tr:nth-child(odd) {
     background-color: var(--cor-branco);
@@ -328,11 +339,46 @@ td:last-child::before {
     left: 10px;
 }
 
-td:last-child {position: relative;}
+td:last-child {
+    position: relative;
+}
 
 
 
-.conteudo h2::before { content: "🍁";}
+.conteudo h2::before {
+    content: "🍁";
+}
+
+
+/* Regras para produtos */
+
+
+
+.galeria {
+    text-align: center;
+}
+
+.galeria img {
+    border-radius: 100%;
+    transform: scale(0.9);
+    transition: 0.4s;
+    filter:brightness(80%);
+}
+
+/* Aplicamos o :hover e o :focus ao seletor de tag "a" em vez de aplicar no "img". Desta forma o acionamneto funcionará tanto com o mouse quanto com o teclado. */
+
+
+.galeria a:hover img, .galeria a:focus img {
+    transform: scale(1);
+    border-radius: 10%;
+    filter: none;
+}
+
+
+
+
+
+
 
 
 
@@ -407,13 +453,3 @@ td:last-child {position: relative;}
         max-width: 1000px;
     }
 }
-
-
-
-
-
-
-
-
-
-
