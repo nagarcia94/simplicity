@@ -320,8 +320,19 @@ tr:nth-child(odd) {
     background-color: var(--cor-branco);
 }
 
+/* Pseudo-elemento ::before */
+
+td:last-child::before {
+    content: "R$";
+    position: absolute;
+    left: 10px;
+}
+
+td:last-child {position: relative;}
 
 
+
+.conteudo h2::before { content: "🍁";}
 
 
 
