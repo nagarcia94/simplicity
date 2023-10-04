@@ -60,7 +60,7 @@
 
                 <div>
                 <!--Nascimento -->
-                <label for="nascimento"><b>Data de Nascimento</b>
+                <label for="nascimento"><b>Data de Nascimento:</b>
                 </label>
                 <input type="date" name="nascimento" id="nascimento">
             </div>
@@ -71,8 +71,29 @@
                     <input type="tel" name="telefone" id="telefone">
                 </div>
 
-                <!--Assunto-->
-                <!--Msg-->
+                
+                <div><!--Assunto-->
+
+                    
+                    <label for="assunto"><b>Assunto:</b></label>
+                    <select name="assunto" id="assunto">
+                        <!-- Deixar um option vazio de propósito, para deixar uma opção nao selecionada -->
+                        <option value=""></option>
+                        <option>Dúvida</option>
+                        <option>Elogios</option>
+                        <option>Reclamações</option>
+                        <option>Outros</option>
+                    </select>
+                    </div>
+
+                <div><!--Msg-->
+                <label for="mensagem"><b>Mensagem:</b></label>
+                <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Enviar dados</button>
+                </div>
 
             </form>
 
