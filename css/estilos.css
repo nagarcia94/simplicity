@@ -362,13 +362,14 @@ td:last-child {
     border-radius: 100%;
     transform: scale(0.9);
     transition: 0.4s;
-    filter:brightness(80%);
+    filter: brightness(80%);
 }
 
 /* Aplicamos o :hover e o :focus ao seletor de tag "a" em vez de aplicar no "img". Desta forma o acionamneto funcionará tanto com o mouse quanto com o teclado. */
 
 
-.galeria a:hover img, .galeria a:focus img {
+.galeria a:hover img,
+.galeria a:focus img {
     transform: scale(1);
     border-radius: 10%;
     filter: none;
@@ -376,9 +377,68 @@ td:last-child {
 
 
 
+/* Regras para formulario */
 
 
 
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input,
+select,
+textarea {
+    border: none;
+    padding: 4px;
+    height: 40px;
+    border-radius: 4px;
+
+}
+
+textarea {
+    height: auto;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 30%;
+}
+
+/* Pseudo-classe :not() permite criar exceções para uma regra.
+Neste exemplo, estamos aplicando 70% de largura para tudo (*) dentro do "form div" EXECETO o "label" */
+
+form div *:not(label) {
+    width: 70%;
+}
+
+button {
+    background-color: var(--cor-preto);
+    color: var(--cor-gelo);
+    border: none;
+    font-weight: bold;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+
+}
+
+button:hover,
+button:focus {
+    background-color: var(--cor-branco);
+    color: var(--cor-texto);
+    box-shadow: var(--cor-preto) 0 0 2px;
+
+}
 
 
 
