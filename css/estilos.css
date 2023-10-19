@@ -441,6 +441,17 @@ button:focus {
 }
 
 
+#cep {
+    width: 60%;
+}
+
+#buscar {
+    width: 39%;
+    padding: 12px;
+}
+
+
+
 
 @media screen and (min-width: 570px) {
 
