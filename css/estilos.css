@@ -1,162 +1,161 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:wght@700;800&display=swap');
 
-* {
-    box-sizing: border-box;
-}
+
+* { box-sizing: border-box; }
 
 :root {
-    /* Variavéis para a paleta de cores do site */
+    /* Variáveis para a 
+    paleta de cores do site */
     --cor-titulo: #4d4d4d;
     --cor-texto: #333;
-    --cor-preto: #000;
-    --cor-branco: #fff;
-    --cor-gelo: #ececec;
+    --cor-escura: #000;
+    --cor-clara: #fff;
+    --cor-intermediaria: #ececec;
 }
 
-html {
-    font-size: 16px;
-}
+html { font-size: 16px; }
+
 
 body {
     color: var(--cor-texto);
     font-family: 'Noto Sans', sans-serif;
-    background-color: var(--cor-branco);
+    background-color: var(--cor-clara);
 }
 
 /* CSS Reset em alguns elementos */
-body,
-h1,
-h2,
-p,
-figure,
-.menu {
+body, h1, h2, p, figure, .menu {
     margin: 0;
     padding: 0;
 }
 
-img {
-    max-width: 100%;
-}
+img { max-width: 100%; }
 
 h1 {
-    font-family: 'Raleway', sans-serif;
+    font-family: Raleway, sans-serif;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 1.5rem;
 }
 
-
-/* usando a letra (a) pois é um seletor decedente onde eu quero pegar o link que esta dentro do h1 */
 h1 a {
-    color: var(--cor-branco);
-    background-color: var(--cor-preto);
+    color: var(--cor-clara);
+    background-color: var(--cor-escura);
     padding: 0.3rem 1rem;
-    border: 4px;
+    border-radius: 4px;
 }
 
-a {
-    text-decoration: none;
-}
+a { text-decoration: none; }
 
 header .limitador {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 10vh;
-
+    height: 12vh;
 }
 
 header {
     position: sticky;
     top: 0;
-    /* z-index garante que o header fique para frente do conteudo */
     z-index: 100;
-    background-color: var(--cor-branco);
-
+    background-color: var(--cor-clara);
 }
 
-.menu {
-    list-style: none;
-}
 
 /* Formatação da palavra Menu */
 nav h2 a {
-    color: var(--cor-preto);
+    color: var(--cor-escura);
     font-size: 1.2rem;
     padding: 1rem;
     display: inline-block;
-
 }
 
-nav h2 a:hover,
-nav h2 a:focus,
-.menu a:hover,
-.menu a:focus {
-    background-color: var(--cor-gelo);
+nav h2 a:hover, nav h2 a:focus, 
+.menu a:hover, .menu a:focus {
+    background-color: var(--cor-intermediaria);
 }
-
 
 /* Regra da lista ul de links */
-.menu {
-    list-style: none;
-    /* usamos (display none) para nao exibir a lista de links */
+.menu { 
+    list-style: none; 
+
+    /* ATENÇÃO!
+    Usamos display:none para
+    não exibir inicialmente
+    a lista de links. */
     display: none;
 }
 
-
-
-/* Regras para formartar os links contidos n alista menu */
+/* Regra para formatar os
+links contidos na lista/menu */
 .menu a {
-    color: var(--cor-texto);
+    color: var(--cor-escura);
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 50px;    
 }
 
-/* Seletor de classes combinadas 
-  Essa regra so ira funcionar quando AS DUAS CLASSES estiverem aplicadas JUNTAS  no elemento HTML ( no caso, na lista de menu/links) 
-  
-  OBS: esta combinação será possível por meio da manipulação programada com javascript. */
 
+
+/* Seletor de classes combinadas
+Esta regra somente irá funcionar quando
+AS DUAS CLASSES estiverem aplicadas JUNTAS no
+elemento HTML (no caso, na lista de menu/links). 
+
+Obs.: esta combinação será possível por meio
+da manipulação programada com JavaScript. */
 .menu.aberto {
-    /* O Flex fará a lista de links aparecer  */
+
+    /* O Flex fará a lista de links aparecer */
     display: flex;
 
     /* Com os links em forma de coluna (vertical) */
     flex-direction: column;
-
-    /* Usamos as propriedades de posicionamento e coordenadas para garantir o encaixe correto (abaixo do titulo e da palavra Menu). */
+    
+    /* Usamos as propriedades de posicionamento
+    e coordenadas para garantir o encaixe correto
+    (abaixo do título e da palavra Menu). */
     position: absolute;
     left: 0;
     right: 0;
-
-    /* usamos o background para ter uma cor visivel */
-    background-color: var(--cor-gelo);
-
+    
+    /* Aplicamos um fundo à lista evitando a
+    dificuldade de leitura dos links */
+    background-color: var(--cor-clara);
 }
 
+/* Exercícios */
+
+/* 1) Crie uma regra CSS para formatar o artigo/seção de Destaque com as seguintes configurações:
+
+-Altura de uns 500px
+-Imagem de fundo (fundo-destaque)
+-Imagem de fundo deve ficar parada
+-Flex com alinhamento totalmente centralizado, e um elemento em cima do outro (ou seja, em modo coluna) */
 .destaque {
-    height: 90vh;
+    height: 88vh;
     background-image: url(../imagens/fundo-destaque.jpg);
     background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
-
 }
 
+/* 2) Crie uma regra CSS para formatar o h2 e o p
+contidos em Destaque. Faça com que os textos
+fiquem centralizados e com a cor clara */
+.destaque h2, .destaque p { 
+    text-align: center;
+    color: var(--cor-clara);
+
+    animation-name: animaDestaque;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
 
 .destaque h2 {
-    /* Função clamp 
-    (tamanho mininimo 
-    tamanho maximo
-    tamanho ideal 
-    tamanho maximo) */
-
     font-size: clamp(3rem, 10vw, 7rem);
 }
 
@@ -164,93 +163,94 @@ nav h2 a:focus,
     font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
-.destaque h2,
-.destaque p {
-    /* indicando onde eu quero a animação colocando no p destaques */
-    animation-name: animaDestaque;
-    animation-duration: 4s;
-    animation-timing-function: ease-out;
-    color: var(--cor-branco);
-}
-
-/* Regras de animação */
-
+/* Regra de animação */
 @keyframes animaDestaque {
-    from {
-        opacity: 0;
-        transform: translateY(-500px);
-
-
+    from { 
+        opacity: 0; 
+        transform: translateY(-600px);
     }
-
-    to {
-        opacity: 1;
-
-    }
+    
+    to { opacity: 1; }
 }
-
-
 
 article h2 {
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: Raleway, sans-serif;
     color: var(--cor-titulo);
 }
 
-.front-end,
-.historia,
-.localizacao {
+.front-end, .historia, .localizacao {
     text-align: center;
-
 }
-
 
 article p {
     padding: 0.5rem 0;
-    font-size: 1.3rem;
-
+    font-size: 1.2rem;
 }
-
 
 abbr {
-    text-decoration: underline solid;
+    text-decoration: none;
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    padding: 0 2px;
+    border-radius: 4px;
 }
 
-address {
-    font-style: normal;
-}
+address { font-style: normal; }
 
 
+/* Correção dos exercícios */
+
+/* 1) Crie uma regra para formatar o artigo de História da Internet com:
+- Plano de fundo: imagem "fundo-madeira"
+- Deixe a imagem parada e cobrindo todo o espaço do artigo */
 .historia {
     background-image: url(../imagens/fundo-madeira.jpg);
     background-attachment: fixed;
-    height: 500px;
 }
 
+/* 2) Crie uma regra para formatar o titulo "História da Internet" com cor clara e uma sombra no texto. */
 .historia h2 {
-    color: var(--cor-branco);
-    text-shadow: rgb(156, 44, 4) 4px 5px 0px;
-
+    color: var(--cor-clara);
+    text-shadow: var(--cor-escura) 2px 2px 4px;
 }
 
+/* 3) Crie uma regra para formatar o vídeo do artigo História da Internet com:
+- Largura de 100%
+- Largura máxima de 700px
+- Margem inferior de 2rem */
 .historia iframe {
     width: 100%;
-    margin-top: 2rem;
     max-width: 700px;
+    margin-bottom: 2rem;
 }
 
-.localizacao frame {
-    width: 100vw;
+/* 4) Crie uma regra para formatar o mapa da Localização com:
+- Largura de 100%
+- Margem superior de 2rem */
+.localizacao iframe {
+    width: 100%;
     margin-top: 2rem;
-
 }
 
+/* 5) Crie uma classe chamada "limitador" com largura de 95vw e margem automática. Aplique esta classe no cabeçalho e no artigo front-end. */
+.limitador {
+    width: 95vw;
+    margin: auto;
+}
 
+/* 6) Crie uma regra para o rodapé com:
+- Fundo escuro
+- Cor do texto clara
+- Altura de 30vh
+- Negrito
+- Flex com centralização total
+- Texto centralizado */
 footer {
-    background-color: #000;
-    color: var(--cor-branco);
-    height: 20vh;
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    height: 30vh;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -258,18 +258,10 @@ footer {
     text-align: center;
 }
 
-.limitador {
-    width: 95vw;
-    margin: auto;
 
-}
-
-
-
-/* Regras para as paginas Produtos , Serviços e Contato. */
-
+/* Regras para as páginas Produtos, Serviços e Contato */
 .conteudo {
-    background-color: var(--cor-gelo);
+    background-color: var(--cor-intermediaria);
     padding: 0.5rem;
     border-radius: 8px;
 }
@@ -281,18 +273,16 @@ footer {
     margin-bottom: 1rem;
 }
 
+
 table {
     width: 80%;
     margin: auto;
-    border: solid 1px;
 }
 
-
-table,
-th,
-td {
+table, th, td {
     border: solid 1px;
-    /* border collapse remove o espaço entre as bordas */
+
+    /* Remove o espaço entre bordas */
     border-collapse: collapse;
 }
 
@@ -300,112 +290,82 @@ caption {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.1rem;
-    background: rgb(238, 114, 114);
-    color: var(--cor-branco);
-    padding: 4px;
+    padding-bottom: 0.5rem;
 }
-
 
 th {
-    background-color: var(--cor-branco);
-    color: var(--cor-preto);
-    border-color: var(--cor-texto);
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border-color: var(--cor-escura);
     padding: 0.7rem;
-
 }
 
-td {
-    padding: 0.5rem;
-}
+td { padding: 0.5rem; }
 
-td:nth-child(2) {
-    text-align: center;
-}
+td:nth-child(2) { text-align: center; }
 
-th:last-child,
-td:last-child {
+th:last-child, td:last-child { 
     text-align: right;
 }
 
+th:first-child { text-align: left; }
+
 tr:nth-child(odd) {
-    background-color: var(--cor-branco);
+    background-color: var(--cor-clara);
 }
 
-/* Pseudo-elemento ::before */
-
-td:last-child::before {
-    content: "R$";
+/* Pseudo-elemento  ::before (::after) */
+td:last-child { position: relative; }
+td:last-child::before { 
+    content: "R$ ";
     position: absolute;
     left: 10px;
-}
+} 
 
-td:last-child {
-    position: relative;
-}
+/* Regra geral do emoji do h2 dentro dos articles conteudo */
+.conteudo h2::before { content: "ℹ️ "; }
+.servicos h2::before { content: "🛠️ "; }
+.contato h2::before { content: "📧 "; }
 
-
-
-.conteudo h2::before {
-    content: " ⚙ ";
-}
-
-
-/* Regras para produtos */
-
-
-
-.galeria {
-    text-align: center;
-}
-
+.galeria { text-align: center; }
 .galeria img {
     border-radius: 100%;
     transform: scale(0.9);
-    transition: 0.4s;
-    filter: brightness(80%);
+    transition: 0.3s;
+    filter: blur(1px) brightness(150%);
 }
 
-/* Aplicamos o :hover e o :focus ao seletor de tag "a" em vez de aplicar no "img". Desta forma o acionamneto funcionará tanto com o mouse quanto com o teclado. */
-
-
-.galeria a:hover img,
-.galeria a:focus img {
+/* Aplicamos o :hover e o :focus ao seletor de tag "a"
+em vez de aplicar no "img". Desta forma, o acionamento funcionará
+tanto com mouse quanto com teclado. */
+.galeria a:hover img, .galeria a:focus img {
     transform: scale(1);
     border-radius: 10%;
-    filter: none;
+    filter: blur(0);
 }
 
 
 
-/* Regras para formulario */
-
-
-
+/* Regras para o formulário */
 form {
     max-width: 500px;
     margin: auto;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
     border: none;
     padding: 4px;
     height: 40px;
     border-radius: 4px;
-
 }
 
-textarea {
-    height: auto;
-}
+textarea { height: auto; }
 
 form div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0.5rem;
-
+    margin-top: 1rem;
 }
 
 label {
@@ -414,79 +374,76 @@ label {
     width: 30%;
 }
 
-/* Pseudo-classe :not() permite criar exceções para uma regra.
-Neste exemplo, estamos aplicando 70% de largura para tudo (*) dentro do "form div" EXECETO o "label" */
+/* Pseudo-classe :not()
+Permite criar exceções para uma regra.
+Neste exemplo, estamos aplicando 70% de largura
+para tudo (*) dentro do "form div" EXCETO o "label". */
+form div *:not(label) { width: 70%; }
 
-form div *:not(label) {
-    width: 70%;
-}
 
 button {
-    background-color: var(--cor-preto);
-    color: var(--cor-gelo);
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
     border: none;
     font-weight: bold;
-    padding: 0.5rem 0.5rem;
+    padding: 1rem 0.5rem;
     cursor: pointer;
     border-radius: 4px;
-
 }
 
-button:hover,
-button:focus {
-    background-color: var(--cor-branco);
-    color: var(--cor-texto);
-    box-shadow: var(--cor-preto) 0 0 2px;
-
+button:hover, button:focus {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+    box-shadow: var(--cor-escura) 0 0 2px;
 }
 
+#cep { width: 60%; }
 
-#cep {
-    width: 60%;
-}
-
-#buscar {
-    width: 35%;
+#buscar { 
+    width: 39%; 
     padding: 12px;
 }
 
+#status { font-size: 12px; }
+
+.exemplo { display: none; }
 
 
 
+
+/* Exercícios: regras condicionais (Media Queries) */
+
+/* 1) Crie uma regra condicional para telas a partir
+de 570px com as seguintes alterações:
+
+- Esconder a palavra Menu
+- Habilitar o flex para a classe "menu"
+- Definir largura de 100% para os itens dentro do "menu"
+- Definir largura de 70% para o nav
+- Reduzir para 150px a altura da imagem contida no artigo Front-End */
 @media screen and (min-width: 570px) {
+    nav h2 { display: none; }
+    .menu { display: flex; }
+    .menu li { width: 100%; }
+    nav { width: 70%; }
+    .front-end img { height: 150px; }
+}
 
-    header h2 {
-        display: none;
-    }
+/* 2) Crie uma regra condicional para telas a partir de 900px
+com  as seguintes alterações:
 
-    .menu {
-        display: flex;
-
-    }
-
-    .menu li {
-        width: 100%;
-    }
-
-    header nav {
-        width: 70%;
-    }
-
-    .front-end img {
-        height: 150px;
-    }
+- Aumentar o tamanho geral de todos os textos para 18px 
+- Definir o tamanho máximo da classe limitador para 1000px; */
+@media screen and (min-width: 900px){
+    .limitador { max-width: 900px; }
+    html { font-size: 18px; }
 }
 
 
-@media screen and (min-width: 900px) {
 
 
-    html {
-        font-size: 20px;
-    }
 
 
-    .limitador {
-        max-width: 1000px;
-    }
-}
+
+
+
