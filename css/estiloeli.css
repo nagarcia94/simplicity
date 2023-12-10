@@ -281,26 +281,18 @@ fiquem centralizados e com a cor clara */
 /* fim de estilo para home. */
 
 
-article h2 {
-    padding: 1rem;
-    font-size: 1.5rem;
-    font-family: Raleway, sans-serif;
-    color: var(--cor-titulo);
-}
-
- .dicas, .localizacao {
+  .localizacao {
     text-align: center;
 }
-article p {
-    padding: 0.5rem 0;
-    font-size: 1.2rem;
+
+address {  
+    font-size: 14px;
 }
 
-
-
-address { font-style: normal; }
-
-
+.logorodape {
+    width: 200px;
+    margin: 25px;
+}
 
 
 /* criando estilo para DICAS no HOME */
@@ -311,45 +303,43 @@ address { font-style: normal; }
 }
 
 
-.dicas h2 {
+.dicasnutri h2 {
     color: green;
     text-shadow:rgba(0, 128, 0, 0.534) 2px 2px 4px;
+    text-align: center;
 }
 
-/* 3) Crie uma regra para formatar o vídeo do artigo História da Internet com:
-- Largura de 100%
-- Largura máxima de 700px
-- Margem inferior de 2rem */
-.historia iframe {
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 2rem;
+.dicas {
+    display: flex;
+}
+.dicas p {
+    font-size: 16px;
+    margin-top: -55px;
+}
+.dicas img {        
+    width:150px;
+    border-color: white;
+    border-style:solid;
+    margin:50px;
+    align-items: center;
+    text-align: center;
+
+}
+.dicas  .ervas{
+    margin-left: 5px;
+   
 }
 
-/* 4) Crie uma regra para formatar o mapa da Localização com:
-- Largura de 100%
-- Margem superior de 2rem */
-.localizacao iframe {
-    width: 100%;
-    margin-top: 2rem;
-}
 
-/* 5) Crie uma classe chamada "limitador" com largura de 95vw e margem automática. Aplique esta classe no cabeçalho e no artigo front-end. */
 .limitador {
     width: 95vw;
     margin: auto;
 }
 
-/* 6) Crie uma regra para o rodapé com:
-- Fundo escuro
-- Cor do texto clara
-- Altura de 30vh
-- Negrito
-- Flex com centralização total
-- Texto centralizado */
+
 footer {
-    background-color: var(--cor-escura);
-    color: var(--cor-clara);
+    background-color: white;
+    color: black;
     height: 30vh;
     font-weight: bold;
     display: flex;
