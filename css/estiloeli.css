@@ -160,9 +160,9 @@ fiquem centralizados e com a cor clara */
 }
 
 .destaque h2 {
-    font-size: 55px;
+    font-size: 40px;
     position: relative;
-    right: 150px;
+    right: 290px;
 
 }
 .orange {
@@ -170,9 +170,9 @@ fiquem centralizados e com a cor clara */
 }
 
 .destaque p {
-    font-size: 30px;
+    font-size: 24px;
     position: relative;
-    right: 150px;
+    right: 300px;
     
 }
 
@@ -191,7 +191,7 @@ fiquem centralizados e com a cor clara */
     padding-right: 10px;
     padding-left: 10px;
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 16px;
     
 
 }
@@ -201,7 +201,7 @@ fiquem centralizados e com a cor clara */
     padding-right: 10px;
     padding-left: 10px;
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 16px;
     
     
 }
@@ -242,7 +242,8 @@ fiquem centralizados e com a cor clara */
 .fotoeli img {
     border-radius: 30px;
     height: 75vh;
-    margin: 20px
+    margin: 20px;
+    
     
 }
 .offerservicos {
@@ -287,7 +288,7 @@ article h2 {
     color: var(--cor-titulo);
 }
 
- .historia, .localizacao {
+ .dicas, .localizacao {
     text-align: center;
 }
 article p {
@@ -300,20 +301,19 @@ article p {
 address { font-style: normal; }
 
 
-/* Correção dos exercícios */
 
-/* 1) Crie uma regra para formatar o artigo de História da Internet com:
-- Plano de fundo: imagem "fundo-madeira"
-- Deixe a imagem parada e cobrindo todo o espaço do artigo */
-.historia {
-    background-image: url(../imagens/fundo-madeira.jpg);
+
+/* criando estilo para DICAS no HOME */
+
+.dicas {
+    background-color: #ececec;
     background-attachment: fixed;
 }
 
-/* 2) Crie uma regra para formatar o titulo "História da Internet" com cor clara e uma sombra no texto. */
-.historia h2 {
-    color: var(--cor-clara);
-    text-shadow: var(--cor-escura) 2px 2px 4px;
+
+.dicas h2 {
+    color: green;
+    text-shadow:rgba(0, 128, 0, 0.534) 2px 2px 4px;
 }
 
 /* 3) Crie uma regra para formatar o vídeo do artigo História da Internet com:
@@ -427,10 +427,10 @@ td:last-child::before {
 .servicos h2::before { content: "🛠️ "; }
 .contato h2::before { content: "📧 "; }
 
-.galeria { text-align: center; }
+.dicas .galeria { text-align: center; }
 .galeria img {
-    border-radius: 100%;
-    transform: scale(0.9);
+    border-radius: 50%;
+    transform: scale(0.4);
     transition: 0.3s;
     filter: blur(1px) brightness(150%);
 }
