@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,500&display=swap');
 
 
 * { box-sizing: border-box; }
@@ -40,7 +41,8 @@ h1 {
 
  .logo{
     padding: 1.3rem 1rem;
-    margin: auto;
+    width: 380px;
+    margin-left: -80px;
     
     
 }
@@ -53,7 +55,7 @@ header .limitador {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 28vh;
+    height: 18vh;
 
 }
 
@@ -130,14 +132,10 @@ da manipulação programada com JavaScript. */
     background-color: var(--cor-clara);
 }
 
-/* Exercícios */
 
-/* 1) Crie uma regra CSS para formatar o artigo/seção de Destaque com as seguintes configurações:
+/*  regra CSS para formatar o h2 e o p
+contidos em Destaque. */
 
--Altura de uns 500px
--Imagem de fundo (fundo-destaque)
--Imagem de fundo deve ficar parada
--Flex com alinhamento totalmente centralizado, e um elemento em cima do outro (ou seja, em modo coluna) */
 .destaque {
     height: 80vh;
     background-image: url(../imagens/destaquehome.jpg);
@@ -148,12 +146,10 @@ da manipulação programada com JavaScript. */
     flex-direction: column;
     background-size: cover;
     
-   
 }
 
-/* 2) Crie uma regra CSS para formatar o h2 e o p
-contidos em Destaque. Faça com que os textos
-fiquem centralizados e com a cor clara */
+
+
 .destaque h2, .destaque p { 
     color:var(--cor-escura);
    
@@ -277,23 +273,10 @@ fiquem centralizados e com a cor clara */
     margin: auto;
 }
 
-
-/* fim de estilo para home. */
-
-
-  .localizacao {
-    text-align: center;
+.limitador {
+    width: 95vw;
+    margin: auto;
 }
-
-address {  
-    font-size: 14px;
-}
-
-.logorodape {
-    width: 200px;
-    margin: 25px;
-}
-
 
 /* criando estilo para DICAS no HOME */
 
@@ -331,14 +314,11 @@ address {
 }
 
 
-.limitador {
-    width: 95vw;
-    margin: auto;
-}
 
+/* estilo para localização e footer */
 
 footer {
-    background-color: white;
+    background-color: var(--cor-clara);
     color: black;
     height: 30vh;
     font-weight: bold;
@@ -348,157 +328,35 @@ footer {
     text-align: center;
 }
 
-
-/* Regras para as páginas Produtos, Serviços e Contato */
-.conteudo {
-    background-color: var(--cor-intermediaria);
-    padding: 0.5rem;
-    border-radius: 8px;
+.localizacao {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+  
 }
 
-.conteudo h2 {
-    padding-left: 0;
-    font-size: 1.8rem;
-    border-bottom: solid 1px;
-    margin-bottom: 1rem;
+address {  
+  font-size: 14px;
+
 }
-
-
-table {
-    width: 80%;
+.medias-social {
+    margin-left: 50px;
+}
+.medias-social a {
+    align-items:center;
+    justify-content:center;
+    margin: 10px;
+    color: black;
+    background-color: rgba(255, 166, 0, 0.733);
+    padding: 10px;
+    border-radius: 100px;
+    
+}
+.medias-social a i {
+    font-size: 24px;
+    text-align: center;
     margin: auto;
 }
-
-table, th, td {
-    border: solid 1px;
-
-    /* Remove o espaço entre bordas */
-    border-collapse: collapse;
-}
-
-caption {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding-bottom: 0.5rem;
-}
-
-th {
-    background-color: var(--cor-escura);
-    color: var(--cor-clara);
-    border-color: var(--cor-escura);
-    padding: 0.7rem;
-}
-
-td { padding: 0.5rem; }
-
-td:nth-child(2) { text-align: center; }
-
-th:last-child, td:last-child { 
-    text-align: right;
-}
-
-th:first-child { text-align: left; }
-
-tr:nth-child(odd) {
-    background-color: var(--cor-clara);
-}
-
-/* Pseudo-elemento  ::before (::after) */
-td:last-child { position: relative; }
-td:last-child::before { 
-    content: "R$ ";
-    position: absolute;
-    left: 10px;
-} 
-
-/* Regra geral do emoji do h2 dentro dos articles conteudo */
-.conteudo h2::before { content: "ℹ️ "; }
-.servicos h2::before { content: "🛠️ "; }
-.contato h2::before { content: "📧 "; }
-
-.dicas .galeria { text-align: center; }
-.galeria img {
-    border-radius: 50%;
-    transform: scale(0.4);
-    transition: 0.3s;
-    filter: blur(1px) brightness(150%);
-}
-
-/* Aplicamos o :hover e o :focus ao seletor de tag "a"
-em vez de aplicar no "img". Desta forma, o acionamento funcionará
-tanto com mouse quanto com teclado. */
-.galeria a:hover img, .galeria a:focus img {
-    transform: scale(1);
-    border-radius: 10%;
-    filter: blur(0);
-}
-
-
-
-/* Regras para o formulário */
-form {
-    max-width: 500px;
-    margin: auto;
-}
-
-input, select, textarea {
-    border: none;
-    padding: 4px;
-    height: 40px;
-    border-radius: 4px;
-}
-
-textarea { height: auto; }
-
-form div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
-}
-
-label {
-    font-size: 0.9rem;
-    font-weight: bold;
-    width: 30%;
-}
-
-/* Pseudo-classe :not()
-Permite criar exceções para uma regra.
-Neste exemplo, estamos aplicando 70% de largura
-para tudo (*) dentro do "form div" EXCETO o "label". */
-form div *:not(label) { width: 70%; }
-
-
-button {
-    background-color: var(--cor-escura);
-    color: var(--cor-clara);
-    border: none;
-    font-weight: bold;
-    padding: 1rem 0.5rem;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-button:hover, button:focus {
-    background-color: var(--cor-clara);
-    color: var(--cor-escura);
-    box-shadow: var(--cor-escura) 0 0 2px;
-}
-
-#cep { width: 60%; }
-
-#buscar { 
-    width: 39%; 
-    padding: 12px;
-}
-
-#status { font-size: 12px; }
-
-.exemplo { display: none; }
-
-
 
 
 /* Exercícios: regras condicionais (Media Queries) */
